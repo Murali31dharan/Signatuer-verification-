@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+    <!-- <link rel="stylesheet" href="./demo.css"> -->
+</head>
+<body">
+    <div class="center">
+    <div class="card" id="loginCard">
+    <h2>Login</h2>
+    {% if error %}
+    <div id="error_message">{{ error }}</div>
+    {% endif %}
+    <form action="/authenticate" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input class="btn-submit" type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="{{url_for('signup')}}" onclick="flipCard()">Sign up here</a>.</p>
+    </div>
+    <div id="error_message" style="display: none;"></div>
+    </div>
+</body>
+</html>

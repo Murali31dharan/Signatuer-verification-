@@ -1,0 +1,23 @@
+Required Python Libraries :
+
+Opencv
+Numpy
+Tkinter
+os
+matplotlib
+scikit image
+sqlite3
+flask
+threading
+flask_socketio
+
+
+How to download the libraries?
+
+1. Open CMD
+2. Check whether the python is installed or not.
+3. For checking that python is installed or not type "Python3" in cmd.
+4. It will opens the script mode python if it opens the python is installed , else go and install python
+5. For download the Libraries type "pip install <package-name>"
+
+

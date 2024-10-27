@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+    background: url("./biometric-signature-pad.jpg");
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.darken{
+    background-color: rbga(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color:whitesmoke
+}
+
+.center {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 9px;
+  }
+
+form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button[type="submit"] {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+button[type="submit"]:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300%;
+    height: 300%;
+    background-color: rgba(0, 123, 255, 0.5);
+    border-radius: 50%;
+    z-index: 0;
+    animation: glow 1s infinite alternate;
+}
+
+button[type="submit"]:hover {
+    z-index: 1;
+    background-color: #0056b3;
+    animation: blink 1s infinite alternate;
+    color: #fff;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink{
+    0%{
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+    50%{
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    }
+
+    100%{
+        box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+    }
+}
+
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 9999;
+    display: none;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #76a8ca;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.load-link :hover {
+    cursor: pointer;
+}
+
+
+.logout-link {
+    float: right;
+    text-decoration: none;
+    color: #fff; /* Change color as needed */
+    font-weight: bold;
+    font-size: large;
+}
+
+.logout-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #ff0000; /* Change color on hover */
+}
